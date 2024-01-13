@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registaration Form</title>
+</head>
+<body>
+    <header class="head-section">
+        <a href="./index.html" class="head-link">Student Registaration Form</a>
+        <br><br> 
+    </header>
+    <main>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="fname">First Name: </label>
+                    </th>
+                    <td>
+                        <input type="text" name="fname" placeholder="Enter your first name..." class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="lname">Last Name: </label>
+                    </th>
+                    <td>
+                        <input type="text" name="lname" placeholder="Enter your last name..." class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="email">Email: </label>
+                    </th>
+                    <td>
+                        <input type="email" name="email" placeholder="Email should contain '@' " class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="mobile">Mobile: </label>
+                    </th>
+                    <td>
+                        <input type="number" name="mobile" maxlength="10" minlength="10" placeholder="Only 10 digits are allowed" class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="gender">Gender: </label>
+                    </th>
+                    <td>
+                        <input type="radio" name="gender">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender">
+                        <label for="female">Female: </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="dob">Date Of Birth: </label>
+                    </th>
+                    <td>
+                        <input type="date" name="dob" class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="address">Address: </label>
+                    </th>
+                    <td>
+                        <textarea name="address" id="address" cols="30" rows="10" class="input-bar"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="city">City: </label>
+                    </th>
+                    <td>
+                        <input type="text" name="city" class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="areapin">Area PIN: </label>
+                    </th>
+                    <td>
+                        <input type="text" name="areapin" class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="state">State: </label>
+                    </th>
+                    <td>
+                        <input type="text" name="state" class="input-bar">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="qualification">Qualification</label>
+                    </th>
+                    <td>
+                        <select name="qualification" id="qualification">
+                            <option value="null" selected disabled>Select Qualification</option>
+                            <option value="computerscience">Computer Science</option>
+                            <option value="informationtechnology">Information Technology</option>
+                            <option value="computerarchitecture">Computer Architecture</option>
+                            <option value="telecommunication">Tele Communication</option>
+                        </select>
+                        <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="Specialization">Specialization</label>
+                    </th>
+                    <td>
+                        <input type="checkbox" name="computerscience">
+                        <label for="computerscience">Computer Science</label>
+                        <br>
+                        <input type="checkbox" name="informationtechnology">
+                        <label for="informationtechnology">Information Technology</label>
+                        <br>
+                        <input type="checkbox" name="computerarchitecture">
+                        <label for="computerarchitecture">Computer Architecture</label>
+                        <br>
+                        <input type="checkbox" name="telecommunication">
+                        <label for="telecommunication">Tele Communication</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="table-side-text">
+                        <label for="password">Password: </label>
+                    </th>
+                    <td>
+                        <input type="password" name="password" class="input-bar" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Registered" class="btn">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+</body>
+</html>

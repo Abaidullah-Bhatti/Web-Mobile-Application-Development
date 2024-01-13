@@ -1,0 +1,19 @@
+*{
+    font-family: monospace;
+}
+table {
+    border: 1px solid black;
+    width: 85%;
+    text-align: center;
+    padding: 2px;
+}
+tbody {
+    font-size: 18px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 20px;
+}
+th {
+    font-size: 22px;
+}
