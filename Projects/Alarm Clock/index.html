@@ -4,70 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #1e7785;
-        }
-        .main {
-            text-align: center;
-            margin: 13% 0% 0% 31%;
-            background-color: #fff;
-            border-radius: 12%;
-            width: 38%;
-        }
-        .clockMain {
-            padding: 10%;
-        }
-        .setAlarmBtn {
-            background: none;
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-            border: 2px solid #1e7785;
-            padding: 14px 40px;
-            outline: none;
-            color: black;
-            font-family: cursive;
-            font-style: italic;
-            font-weight: bold;
-            border-radius: 24px;
-            transition: 0.25s;
-            cursor: pointer;
-        }
-        .setAlarmBtn:hover {
-            background: #1e7785;
-        }
-        .timeForm {
-            width: 100%;
-            text-align: center;
-            padding: 20px 0px;
-
-        }
-        .clockImage {
-            width: 56%;
-        }
-        .Hours, .Minutes, .Seconds, .amPm {
-            cursor: pointer;
-            background: none;
-            text-align: center;
-            border: 2px solid #1e7785;
-            padding: 14px 10px;
-            outline: none;
-            color: #000;
-            border-radius: 24px;
-            transition: 0.25s;
-        }
-        .Hours:active, .Minutes:active, .Seconds:active, .amPm:active {
-            background-color: #1e7785;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Alarm clock</title>
 </head>
 <body>
     <div class="main">
         <div class="clockMain">
             <div>
-                <img src="images.jfif" class="clockImage" alt="clock">
+                <img src="./Images/images.jfif" class="clockImage" alt="clock">
             </div>
             <h1 class="time" id="cTime">00 : 00 : 00  AM</h1>
             <div class="timeForm">
@@ -219,92 +163,6 @@
             <button class="setAlarmBtn" id="setAlarmBtn" onclick="setAlarm();">SET ALARM</button>
         </div>
     </div>
-    <script> 
-        var isAlarmSet = false;
-        var alarmTime = "";
-        var ringtone = document.getElementById('yourRingtoneElementId'); // Make sure to replace 'yourRingtoneElementId' with the actual ID of your audio element
-        var content = document.getElementById('yourContentElementId'); // Make sure to replace 'yourContentElementId' with the actual ID of your content element
-        var setAlarmBtn = document.getElementById('yourSetAlarmBtnId'); // Make sure to replace 'yourSetAlarmBtnId' with the actual ID of your set alarm button
-
-        setInterval(() => {
-            let date = new Date();
-            let h = date.getHours();
-            let m = date.getMinutes();
-            let s = date.getSeconds();
-            let amPm = "AM";
-
-            if (h >= 12) {
-                h = h - 12;
-                amPm = "PM";
-            }
-
-            // if hour value is 00 set it to 12
-            h = h === 0 ? 12 : h;
-
-            // adding 0 before if the number is less than 10
-            h = h < 10 ? "0" + h : h;
-            m = m < 10 ? "0" + m : m;
-            s = s < 10 ? "0" + s : s;
-
-            var currentTime = h + " : " + m + " : " + s + "  " + amPm;
-            document.getElementById('cTime').innerHTML = currentTime;
-        }, 1000);
-
-        var count = 1 
-        document.getElementById('setAlarmBtn').addEventListener("click", function(){
-            count = count + 1;
-            if(count % 2 == 0) {
-                setAlarm ();
-            } else {
-                clearAlarm();
-            }
-        }) 
-        function setAlarm() {
-            console.log(count);
-            if (isAlarmSet) {
-                alarmTime = "";
-                isAlarmSet = false;
-                return;
-            }
-
-            var ah = document.getElementById('aHou').value;
-            var am = document.getElementById('aMin').value;
-            var as = document.getElementById('aSec').value;
-            var aap = document.getElementById('am/pm').value;
-
-            
-            
-            console.log(ah, am, as, aap);
-
-            if (ah === "Hour" || am === "Minute" || as === "Second" || aap === "AM/PM") {
-                return alert("Please, select a valid time to set Alarm!");
-            } else {
-                var aho = document.getElementById('aHou');
-                var amo = document.getElementById('aMin');
-                var ase = document.getElementById('aSec');
-                var aam = document.getElementById('am/pm');
-                aho.disabled = true;
-                amo.disabled = true;
-                ase.disabled = true;
-                aam.disabled = true;
-            }
-
-            alarmTime = `${ah}:${am} ${aap}`;
-            isAlarmSet = true;
-            
-            document.getElementById('setAlarmBtn').innerText = "Clear Alarm";
-        }
-        function clearAlarm() {
-            var aho = document.getElementById('aHou');
-            var amo = document.getElementById('aMin');
-            var ase = document.getElementById('aSec');
-            var aam = document.getElementById('am/pm');
-            aho.disabled = false;
-            amo.disabled = false;
-            ase.disabled = false;
-            aam.disabled = false;
-            document.getElementById('setAlarmBtn').innerText = "SET ALARM";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
