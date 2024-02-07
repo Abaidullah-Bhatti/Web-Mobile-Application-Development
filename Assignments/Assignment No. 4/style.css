@@ -1,0 +1,287 @@
+/* ----- Importing Fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto&display=swap');
+*{
+    /* Color */
+    --primary: #000;
+    --second: #fff;
+    --third: #fc5d35;
+    --fourth: #ededed;
+    --fifth: #767676;
+    --sixth: #6c6c6c;
+    --seventh: #bcbcbc;
+
+    /* Fonts */
+    --primaryFont: 'Montserrat', sans-serif;
+    --secondFont: 'Protest Guerrilla', sans-serif;
+    --thirdFont: 'Roboto', sans-serif;
+
+    /* Weight */
+    --weight1: 900;
+    --weight2: 600;
+    --weight3: 400;
+
+    /* Display */
+    --disp1 : flex;
+
+    /* Text Align */
+    --tAlign: center;
+
+    /* Width in % */
+    --wid: 100%;
+}
+body {
+    margin: 2% 4% 2% 4%;
+    width: auto;
+    overflow-x: hidden;
+}
+
+/* ----- Navigation Bar ----- */
+
+.navBar {
+    background-color: #dfdfdf5c;
+    display: var(--disp1);
+    position: fixed;
+    width: 92%;
+}
+.logoSection {
+    display: var(--disp1);
+}
+
+.logoText {
+    font-family: var(--primaryFont);
+    font-weight: var(--weight1);
+    margin: 10% 5% 0% 1%;
+}
+.navLinksDiv {
+    margin: 1% 2% 0% 27%;
+    width: var(--wid);
+}
+.navLink {
+    font-family: var(--primaryFont);
+    font-weight: var(--weight2);
+    color: var(--sixth);
+    text-decoration: none;
+    margin: 0% 8% 0% 0%;
+}
+.navLink:hover {
+    color: var(--third);
+    transition: all 1s;
+}
+.navSearch {
+    margin: 0% 5% 0% 0%;
+    width: 3%;
+}
+.navButton {
+    background-color: var(--third);
+    border: 1px solid var(--third);
+    color: var(--second);
+    font-family: sans-serif;
+    padding: 1% 2% 1% 2%;
+    margin-right: 0%;
+    font-size: 15px;
+}
+
+/* ----- Hero Section ----- */
+
+main {
+    padding-top: 10%;
+}
+.heroSection {
+    background-color: #f3f3f3;
+    display: var(--disp1);
+}
+.leftHeroSection {
+    box-sizing: border-box;
+    width: var(--wid);
+    padding: 4%;
+}
+.rightHeroSection {
+    width: var(--wid);
+}
+.heroImage {
+    margin: 13% 0% 0% 5%;
+    width: 90%;
+}
+.heroHead {
+    font-family: var(--secondFont);
+    font-size: 410%;
+}
+.heroText {
+    font-family: var(--primaryFont);
+    font-weight: var(--weight2);
+    color: var(--primary);
+    line-height: 150%;
+    font-size: 17px;
+}
+.button1 {
+    background-color: var(--third);
+    font-family: var(--primaryFont);
+    border: 2px solid var(--third);
+    font-weight: var(--weight1);
+    color: var(--second);
+    padding: 2% 4%;
+}
+.button2 {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    font-family: var(--primaryFont);
+    font-weight: var(--weight1);
+    color: var(--second);
+    padding: 2% 4%;
+}
+
+/* ----- Services Section ----- */
+
+.servicesSection {
+    margin-top: 5%;
+}
+.serviceHead {
+    text-align: var(--tAlign);
+}
+.serviceHeading {
+    font-family: var(--thirdFont);
+    font-weight: var(--weight1);
+    text-align: var(--tAlign);
+    font-size: 35px;
+}
+.serviceHeadText {
+    font-family: var(--primaryFont);
+    font-weight: var(--weight2);
+    text-align: var(--tAlign);
+    color: var(--primary);
+    line-height: 150%;
+    font-size: 15px;
+}
+.serviceCards {
+    text-align: var(--tAlign);
+    display: var(--disp1);
+    margin: 2% 0%;
+}
+.serviceDivHead {
+    font-family: var(--primaryFont);
+    color: var(--third);
+}
+.serviceDivLogo {
+    width: 22%;
+}
+.serviceDiv {
+    border: 1px solid var(--seventh);
+    padding: 2%;
+    margin: 1%;
+}
+.serviceButton {
+    margin: 0% 43% 7% 43%;
+    padding: 1% 3%;
+}
+
+/* ----- Fruits Section ----- */
+
+.fruitDiv {
+    display: var(--disp1);
+    margin-top: 5%;
+}
+.fruitDivHead {
+    font-family: var(--thirdFont);
+    font-weight: var(--weight3);
+    font-size: 30px;
+}
+.fruitDivLeft {
+    width: 80%;
+}
+.fruitDivText {
+    width: 93%;
+}
+.fruitImage {
+    margin: 10% 10% 0% 0%;
+    width: 80%;
+}
+.fruitBtn {
+    margin: 7% 0% 0% 0%;
+    padding: 1.5% 4%;
+    font-size: 15px;
+    width: 20%;
+}
+
+/* ----- Testimonial Section ----- */
+
+.testiSection {
+    text-align: var(--tAlign);
+    margin-top: 10%;
+}
+.clientLabel {
+    font-weight: var(--weight3);
+    font-family: var(--thirdFont);
+    font-size: 27px;
+    margin-top: 0px;
+}
+.testiSpan {
+    display: var(--disp1);
+    margin: 0% 20%;
+    width: 60%;
+}
+
+/* ----- Contact Section ----- */
+
+.contactSection {
+    display: var(--disp1);
+}
+.contactSectionLeft {
+    margin-right: 22%;
+    min-width: 60%;
+    width: 60%;
+}
+.contactHeading {
+    font-weight: var(--weight1);
+}
+.contactInput {
+    width: var(--wid);
+    padding: 1% 0%;
+    margin-top: 3%;
+    border: 0px;
+    border-bottom: 1px solid var(--fifth);
+}
+::placeholder {
+    font-size: 17px;
+}
+.contactBtn {
+    width: 18%;
+    margin-top: 3%;
+}
+
+/* Footer Section */
+
+.footerMain {
+    display: var(--disp1);
+}
+.footerNav {
+    margin: 0% 12% 0% 0%;
+    width: 20%;
+}
+.footerHeading {
+    font-weight: var(--weight1);
+}
+.footerIcons {
+    width: 21%;
+}
+.footerInput{
+    width: var(--wid);
+    padding: 3% 6%;
+}
+.footerButton{
+    margin: 13% 0% 30% 0%;
+    padding: 6% 10%;
+}
+
+/* Copy Rights */
+
+.copyRights {
+    background-color: var(--fourth);
+    font-family: var(--primaryFont);
+    font-weight: var(--weight2);
+    text-align: var(--tAlign);
+    color: var(--fifth);
+    padding: 2%;
+    margin: 0%;
+}
