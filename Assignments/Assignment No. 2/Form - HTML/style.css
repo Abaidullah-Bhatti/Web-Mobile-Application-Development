@@ -2,22 +2,27 @@
     text-align: right;
     padding: 10px;
 }
+
 .head-link {
     margin: 0% 9% 0% 0%;
     font-size: 20px;
     color: red;
 }
+
 table {
     width: 100%;
 }
+
 .input-bar {
     width: 75%;
     padding: 1%;
 }
+
 .table-side-text {
     text-align: left;
     width: 17%;
 }
+
 .btn {
     background-color: #4baf51;
     width: 60%;
