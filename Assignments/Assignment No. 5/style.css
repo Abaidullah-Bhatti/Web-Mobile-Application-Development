@@ -1,0 +1,816 @@
+/*********** Universal ***********/
+* {
+    --primary: #0a192f;
+    --color1: #ccd6f6;
+    --color2: #64ffda;
+    --color3: #ccd6f6;
+    --color4: #8892b0;
+    --color5: #303c55;
+    /* Project Div BG */
+    --color6: #172a45;
+    /* Project Card Div P + proText-l */
+    --color7: #a8b2d1;
+    /* Project Card Name */
+    --color8: #e6f1ff;
+    /* Scrollbar Thumb Color */
+    --color9: #6868689e;
+    /* Scrollbar Track Color */
+    --color10: #1d2a35;
+    /* Preloader Track */
+    --color11: #ff6000;
+
+    --ad1: 1s;
+    --ad1-2: 1.2s;
+    --ad1-5: 1.5s;
+
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--primary);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    display: none;
+}
+
+/*********** Pre-loader ***********/
+#preLoader {
+    background-color: var(--primary);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+}
+
+.kdam-thmor pro-regular {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color10);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color9);
+    border-radius: 50px;
+}
+
+.centerBike {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 26px;
+    margin-left: -12px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#loop {
+    height: 107px;
+    width: 107px;
+    border: var(--color11) solid 4px;
+    border-radius: 200px;
+}
+
+#loop:before {
+    background: linear-gradient(to left, rgba(187, 95, 39, 0) 0%, rgb(255 96 0) 30%, rgb(255 96 0) 70%, rgba(187, 95, 39, 0) 100%);
+    content: "";
+    display: block;
+    height: 4px;
+    left: -100px;
+    position: relative;
+    top: 100px;
+    width: 300px;
+}
+
+#bike-wrapper {
+    height: 108px;
+    width: 108px;
+    animation: drive 3s linear infinite;
+}
+
+#bike {
+    height: 24px;
+    width: 25px;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/motorbike.png");
+}
+
+@keyframes drive {
+    0% {
+        margin-left: -364px;
+        opacity: 0;
+    }
+
+    33.33% {
+        transform: rotate(0deg);
+        margin-left: -50px;
+        opacity: 1;
+    }
+
+    66.66% {
+        transform: rotate(-360deg);
+        margin-left: -50px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-left: 264px;
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+/*********** Animations ***********/
+
+/****** 1 ******/
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-bottom {
+    -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/****** 2 ******/
+@-webkit-keyframes slide-in-fwd-top {
+    0% {
+        -webkit-transform: translateZ(-1400px) translateY(-800px);
+        transform: translateZ(-1400px) translateY(-800px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-fwd-top {
+    0% {
+        -webkit-transform: translateZ(-1400px) translateY(-800px);
+        transform: translateZ(-1400px) translateY(-800px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-fwd-top {
+    -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/*********** Top Navigation Bar ***********/
+.topNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1vw;
+}
+
+.logo {
+    margin-left: 2vw;
+}
+
+.logoLink {
+    text-decoration: none;
+}
+
+.logoSpan {
+    color: #0a192f;
+    font-size: 2vw;
+    padding: 1vw 1.3vw;
+    outline: 2px solid var(--color2);
+    outline-offset: 0.4vw;
+    background-color: var(--color2);
+    border-radius: 10vh;
+}
+
+.navLinks {
+    width: 52vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3vw;
+}
+
+.navLink {
+    color: var(--color1);
+    text-decoration: none;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.num {
+    color: #64ffda;
+}
+
+.navBtn {
+    background-color: transparent;
+    border: 0.2vw solid var(--color2);
+    font-size: 1.4vw;
+    font-family: monospace;
+    color: var(--color2);
+    padding: 1.5vw;
+    width: 10vw;
+    border-radius: 1vw;
+}
+
+.navBtn:hover {
+    background-color: #64ffda1a;
+}
+
+/*********** Left Nav ***********/
+.navLeft {
+    float: left;
+    display: flex;
+    width: 5%;
+    height: 100vw;
+    position: fixed;
+    background-color: transparent;
+    align-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    top: 72%;
+    animation-delay: 1s;
+}
+
+.leftLogos {
+    position: fixed;
+    display: flex;
+    margin-top: 1vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: inherit;
+    height: 70vw;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+ion-icon {
+    color: var(--color1);
+    font-size: 2vw;
+    margin: 0.2vw 0vw;
+}
+
+ion-icon:hover {
+    color: var(--color2);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.line {
+    background-color: var(--color1);
+    height: 0.2vw;
+    transform: rotate(90deg);
+    top: 96%;
+    bottom: 0;
+    position: sticky;
+    width: 12vw;
+}
+
+/*********** Main Section ***********/
+.mainSec {
+    float: left;
+    margin: 0vw 9vw;
+    width: 82vw;
+    box-sizing: border-box;
+    height: 1500px;
+    padding: 1vw 3vw;
+}
+
+/* Intro Section */
+.intro {
+    width: 76vw;
+}
+
+.firstIntro {
+    animation-delay: 0s;
+    font-size: 2vw;
+    color: #64ffda;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.name {
+    animation-delay: 0.2s;
+    color: #ccd6f6;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 5vw;
+    margin: 0;
+}
+
+.detail {
+    animation-delay: 0.4s;
+    color: #8892b0;
+    font-size: 4.4vw;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.introDescrip {
+    animation-delay: 0.6s;
+    color: #8892b0;
+    font-size: 1.25vw;
+    line-height: 2.5vw;
+    font-family: sans-serif;
+}
+
+.introBtn {
+    animation-delay: 0.8s;
+    margin: 4vw 0vw 0vw 0vw;
+    width: 13vw;
+    padding: 1.5vw;
+}
+
+/*********** Right Nav ***********/
+.navRight {
+    float: left;
+    right: 1vw;
+    width: 5vw;
+    height: 100vw;
+    position: fixed;
+    background-color: transparent;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    animation-delay: 1s;
+}
+
+.rightLink {
+    color: var(--color1);
+    font-family: 'Share Tech Mono';
+    font-size: 1vw;
+    position: sticky;
+    top: 67%;
+    font-weight: 100;
+    text-decoration: none;
+    width: 6vw;
+    display: block;
+    text-align: left;
+    transform: rotate(90deg);
+}
+
+.rightLink:hover {
+    color: var(--color2);
+    transition: all 1s;
+    top: 65%;
+}
+
+/* About section */
+
+.aboutHead {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin-top: 6vw;
+    margin-bottom: 3vw;
+}
+
+.rightHead {
+    height: 0.2vw;
+    width: 25vw;
+    margin-left: 15vw;
+    background-color: var(--color5);
+}
+
+.headText {
+    color: var(--color3);
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 2.75vw;
+}
+
+.aboutNum {
+    font-size: 2vw;
+    font-weight: 200;
+    font-family: 'Share Tech Mono';
+}
+
+.aboutContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    animation-delay: 2s;
+}
+
+.aboutLeftContent {
+    width: 48vw;
+}
+
+.aboutRightContent {
+    width: 20vw;
+    margin: 0vw 4vw;
+    outline: 0.2vw solid var(--color2);
+    outline-offset: 2vw;
+}
+
+.aboutRightContent:hover {
+    outline-offset: 1vw;
+    transition: all 0.5s;
+}
+
+.aboutRightContent img {
+    width: 100%;
+}
+
+.overlay {
+    width: 20vw;
+    background-color: #64ffda6b;
+    height: 41.3vw;
+    position: absolute;
+    transform: translate(0vw, -41.5vw);
+}
+
+.overlay:hover {
+    background-color: transparent;
+}
+
+.arrSpan {
+    color: var(--color2);
+    width: 2vw;
+    font-size: 1.3vw;
+}
+
+.techName {
+    color: var(--color4);
+    font-size: 1.6vw;
+    width: 15vw;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+}
+
+.linkText {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+/* Work Section */
+
+.workMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.workNav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 10.4vw;
+    border-left: 1px solid var(--color4);
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.workNavLink {
+    background-color: transparent;
+    padding: 1vw 4vw 1vw 1vw;
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 1.15vw;
+    text-align: left;
+    width: 10vw;
+    border: 0;
+}
+
+.workNavLink:hover {
+    color: var(--color2);
+    background-color: var(--color6);
+}
+
+.active {
+    background-color: var(--color6);
+    color: var(--color2);
+}
+
+.leftLine {
+    position: relative;
+    top: 0;
+    width: 0.29vw;
+    background-color: var(--color2);
+    height: 3.25vw;
+    transition: all 0.5s;
+}
+
+#wc-2,
+#wc-3,
+#wc-4 {
+    display: none;
+}
+
+.workContent {
+    float: left;
+    width: 50vw;
+    left: 8vw;
+    position: relative;
+}
+
+.wchText {
+    color: var(--color3);
+    font-size: 1.6vw;
+    font-family: sans-serif;
+}
+
+.wchTextSpan {
+    color: var(--color2);
+}
+
+.wchDate {
+    color: var(--color3);
+    font-size: 1.2vw;
+    font-family: 'Kdam Thmor Pro';
+}
+
+.wchtLogo {
+    width: 4vw;
+    font-size: 1.5vw;
+    color: var(--color2);
+}
+
+.wctText {
+    color: var(--color4);
+    font-family: system-ui;
+    font-size: 1.3vw;
+}
+
+.wcTable tr {
+    padding: 1.7vw;
+    display: block;
+}
+
+/* Project Card Section */
+
+.projectCard {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.proCardText-f {
+    color: var(--color2);
+    font-family: 'Share Tech Mono';
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+
+.proCardName {
+    color: var(--color8);
+    font-size: 2vw;
+    font-weight: 900;
+    font-family: 'Kdam Thmor Pro';
+}
+
+.proCardDiv {
+    margin-right: -30%;
+    z-index: 1;
+    color: var(--color7);
+    position: relative;
+    background-color: var(--color6);
+    padding: 1.8vw 2.5vw;
+    border-radius: 1vw;
+    font-size: 1.3vw;
+    font-family: system-ui;
+    max-width: 81vw;
+}
+
+.proCardText-l {
+    color: var(--color7);
+    font-size: 1.3vw;
+    font-family: sans-serif;
+}
+
+.proCardRight {
+    width: 100vw;
+}
+
+.proCardImg {
+    width: 100%;
+    height: 19.69vw;
+}
+
+.proCardImg:hover {
+    cursor: pointer;
+}
+
+.overlay-2 {
+    width: 38.7vw;
+    background-color: #64ffda6b;
+    height: 19.7vw;
+    position: absolute;
+    transform: translate(0vw, -20vw);
+}
+
+.overlay-2:hover {
+    display: none;
+}
+
+.projectCard:nth-child(odd) {
+    text-align: right;
+    flex-direction: row-reverse;
+
+    & .proCardLeft {
+        & .proCardDiv {
+            margin-right: 0;
+            margin-left: -30%;
+        }
+    }
+
+    & .proCardRight {
+        width: 105vw;
+
+        & .overlay-2 {
+            width: 39.5vw;
+            height: 20.2vw;
+            transform: translate(0vw, -20.5vw);
+        }
+    }
+}
+
+/* Other Card Section */
+
+.otherSec {
+    margin-top: 10vw;
+}
+
+.otherHead {
+    text-align: center;
+    color: var(--color3);
+    font-size: 2.75vw;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.otherCardMain {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.otherCard {
+    background-color: var(--color6);
+    border-radius: 0.5vw;
+    margin: 3vw 0vw;
+    width: 24vw;
+    padding: 2.5vw;
+    height: 32vw;
+}
+
+.otherCard:hover {
+    margin-top: 1.5vw;
+    transition: all 0.5;
+}
+
+.otherCardLogo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.otherCardContent {
+    margin-top: 2vw;
+}
+
+.otherCardName {
+    color: var(--color3);
+    font-family: sans-serif;
+    font-size: 1.8vw;
+    font-weight: 600;
+}
+
+.otherCardDesc {
+    color: var(--color3);
+    font-size: 1.15vw;
+    font-family: system-ui;
+}
+
+.otherCardDetail {
+    font-size: 1vw;
+    font-family: system-ui;
+    color: var(--color4);
+}
+
+#ocm-2 {
+    display: none;
+}
+
+.showMore {
+    margin: 0% 32vw 0% 32vw;
+    width: 12vw;
+}
+
+/* Get In Touch */
+
+.inTouch {
+    text-align: center;
+    padding: 0vw 15vw;
+    margin: 17vw 0vw;
+}
+
+.inTouchTop {
+    color: var(--color2);
+    font-size: 1.6vw;
+    font-family: system-ui;
+}
+
+.inTouchMain {
+    font-size: 1.6vw;
+    color: var(--color4);
+    font-family: sans-serif;
+}
+
+.sayHello {
+    margin: 5vw 0vw 20vw 0vw;
+}
+
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0%);
+}
