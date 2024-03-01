@@ -255,6 +255,11 @@ body {
     color: var(--color1);
     text-decoration: none;
     font-family: "Share Tech Mono", monospace;
+    transition: all 1s;
+}
+
+.navLink:hover {
+    color: var(--color2);
 }
 
 .num {
