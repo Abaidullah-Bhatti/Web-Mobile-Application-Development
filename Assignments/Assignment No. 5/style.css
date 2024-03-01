@@ -215,6 +215,9 @@ body {
 /*********** Top Navigation Bar ***********/
 .topNav {
     display: flex;
+    position: relative;
+    z-index: 5;
+    background-color: var(--primary);
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -513,6 +516,21 @@ td {
     text-decoration: none;
 }
 
+.linkText:after {
+    background-color: #64ffda;
+    bottom: 2px;
+    content: "";
+    height: 0.5px;
+    left: 0;
+    position: absolute;
+    transition: all .25s ease-in-out;
+    width: 0;
+}
+
+.linkText:hover {
+    text-decoration: underline;
+}
+
 /* Work Section */
 
 .workMain {
@@ -584,6 +602,10 @@ td {
 
 .wchTextSpan {
     color: var(--color2);
+}
+
+.wchTextSpan:hover {
+    text-decoration: underline;
 }
 
 .wchDate {
@@ -675,7 +697,7 @@ td {
 }
 
 .overlay-2:hover {
-    display: none;
+    background-color: transparent;
 }
 
 .projectCard:nth-child(odd) {
@@ -743,6 +765,11 @@ td {
     align-content: center;
     justify-content: space-between;
     align-items: center;
+}
+
+.otherCardLogo ion-icon:nth-child(1) {
+    font-size: 3.3vw;
+    color: var(--color2);
 }
 
 .otherCardContent {

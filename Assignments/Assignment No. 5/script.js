@@ -1,3 +1,29 @@
+// Nav Bar Scrolling
+let lastScrollTop =
+  window.pageYOffset || document.documentElement.scrollTop;
+
+window.addEventListener(
+  'scroll',
+  function handleScroll() {
+    const scrollTopPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTopPosition > lastScrollTop) {
+      this.document.getElementById("topNav").style.position = "relative";
+      console.log('scrolling down');
+    } else if (scrollTopPosition < lastScrollTop) {
+      this.document.getElementById("topNav").style.width = "100vw";
+      this.document.getElementById("topNav").style.position = "fixed";
+      this.document.getElementById("mainSec").style.margin = "6vw 9vw 5vw 9vw";
+      console.log('scrolling up');
+    }
+    lastScrollTop =
+      scrollTopPosition <= 0 ? 0 : scrollTopPosition;
+  },
+  false,
+);
+
+
 // Pre-Loader
 var loader = document.getElementById("preLoader");
 var main = document.getElementById("page");
@@ -15,8 +41,6 @@ const observer = new IntersectionObserver((entries) => {
     console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
     }
   });
 });
