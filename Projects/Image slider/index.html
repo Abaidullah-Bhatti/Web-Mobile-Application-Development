@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image slider</title>
+</head>
+<body>
+    
+    <div class="slider-main">
+        <div class="top-slider">
+            <button onclick="ltBtn()" value="l" class="btn btn-left" id="leftBtn">&lt;</button>
+            <div class="slider">
+                <img src="./assets/image1.jpg" alt="image1" id="sliderImage">
+            </div>
+            <button onclick="rtBtn()" value="r" class="btn btn-right" id="leftBtn">&gt;</button>
+        </div>
+        <div class="slider-btn">
+            <input onclick="changeImage('0')" type="radio" name="slider-button">
+            <input onclick="changeImage('1')" type="radio" name="slider-button">
+            <input onclick="changeImage('2')" type="radio" name="slider-button">
+            <input onclick="changeImage('3')" type="radio" name="slider-button">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

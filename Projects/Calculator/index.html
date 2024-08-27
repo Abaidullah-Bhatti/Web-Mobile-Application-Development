@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="screen">
+                <input type="text" class="display-screen screen-digit" id="display" disabled>
+            </div>
+            <div class="mainButtons">
+                <button onclick="clearScreen()" class="btnStyle top-btn-color">AC</button>
+                <button onclick="appendToDisplay('**')" class="btnStyle top-btn-color">x<sup>-1</sup></button>
+                <button onclick="appendToDisplay('%')" class="btnStyle top-btn-color">%</button>
+                <button onclick="appendToDisplay('/')" class="btnStyle side-btn-color">/</button>
+                <button onclick="appendToDisplay('7')" class="btnStyle">7</button>
+                <button onclick="appendToDisplay('8')" class="btnStyle">8</button>
+                <button onclick="appendToDisplay('9')" class="btnStyle">9</button>
+                <button onclick="appendToDisplay('*')" class="btnStyle side-btn-color">*</button>
+                <button onclick="appendToDisplay('4')" class="btnStyle">4</button>
+                <button onclick="appendToDisplay('5')" class="btnStyle">5</button>
+                <button onclick="appendToDisplay('6')" class="btnStyle">6</button>
+                <button onclick="appendToDisplay('-')" class="btnStyle side-btn-color">-</button>
+                <button onclick="appendToDisplay('1')" class="btnStyle">1</button>
+                <button onclick="appendToDisplay('2')" class="btnStyle">2</button>
+                <button onclick="appendToDisplay('3')" class="btnStyle">3</button>
+                <button onclick="appendToDisplay('+')" class="btnStyle side-btn-color">+</button>
+                <button onclick="appendToDisplay('0')" class="btnStyle zeroBtn">0</button>
+                <button onclick="appendToDisplay('.')" class="btnStyle">.</button>
+                <button onclick="calculateResult()" class="btnStyle side-btn-color">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

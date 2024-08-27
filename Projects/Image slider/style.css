@@ -1,0 +1,47 @@
+body {
+    background-color: #c06bfe;
+}
+
+.slider-main {
+    width: 80%;
+    margin: 0% 10%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: #00000063 4px 4px 20px 0px;
+}
+
+.top-slider {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0% 0% 0%;
+    margin-top: 7%;
+}
+
+.btn {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    z-index: 1;
+    font-size: 15px;
+    background-color: #c06bfe;
+    border: none;
+    color: #fff;
+    font-weight: 900;
+    font-family: monospace;
+}
+
+.btn-left {
+    margin-right: -2%;
+}
+
+.btn-right {
+    margin-left: -2%;
+}
+
+.slider-btn {
+    text-align: center;
+    padding: 2% 0%;
+    accent-color: #8052ec;
+}

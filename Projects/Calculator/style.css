@@ -1,0 +1,81 @@
+body {
+    background-color: #216660;
+}
+
+.main {
+    background-color: black;
+    width: 30vw;
+    margin: 5% 35%;
+    padding: 1.25%;
+    border-radius: 40px;
+}
+
+.container {
+    border-radius: 21px;
+}
+
+.screen {
+    width: 92%;
+    height: 25vh;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0% 4%;
+}
+
+.btnStyle {
+    height: 9vh;
+    width: 6vw;
+    border-radius: 24px;
+    border: none;
+    margin: 8px;
+    background-color: #333;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.zeroBtn {
+    width: 13.58vw;
+}
+
+.side-btn-color {
+    background-color: #f5a003;
+}
+
+.top-btn-color {
+    background-color: #a5a5a5;
+    color: #000;
+
+}
+
+.btnStyle:active {
+    background-color: #a5a5a5;
+    color: #000;
+}
+
+.side-btn-color:active {
+    background-color: #333;
+    color: #fff;
+}
+
+.top-btn-color:active {
+    background-color: #333;
+    color: #fff;
+}
+
+.display-screen {
+    width: 98%;
+    height: 80%;
+    background-color: black;
+    border: none;
+    outline: none;
+    text-align: right;
+    
+}
+
+.screen-digit {
+    color: #6c6c6c;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0% 0% 4% 0%;
+}
